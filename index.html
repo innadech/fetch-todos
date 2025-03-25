@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch Posts</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .main {
+        width: 80%;
+        margin: 0 auto;
+      }
+      .header {
+        text-align: center;
+      }
+      .container {
+        text-align: center;
+      }
+      .block {
+        width: 300px;
+        padding: 20px;
+        background-color: #f4f4f4;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        display: inline-block;
+        margin: 5px;
+      }
+      .block h3 {
+        margin-top: 0;
+      }
+      .close-btn {
+        background-color: #ff5e5e;
+      }
+      .close-btn:hover {
+        background-color: hsl(0, 100%, 63%);
+      }
+      .close-btn:active {
+        background-color: hsl(0, 100%, 58%);
+        box-shadow: 0 3px #423;
+      }
+      p {
+        border: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <button class="btn load-btn">Load Data</button>
+      </div>
+      <div class="container">
+        <!-- <div class="block">
+          <h3>Заголовок</h3>
+          <p>
+            Это текст внутри блока. Здесь вы можете разместить любое сообщение
+            или содержимое.
+          </p>
+          <button class="btn close-btn">Закрыть</button>
+        </div> -->
+      </div>
+    </div>
+    <script src="./model.js"></script>
+    <script src="./generate.js"></script>
+    <script src="./view.js"></script>
+    <script src="./controller.js"></script>
+    <!-- <script src="./fetch.js"></script> -->
+
+    <!-- <script src="./script.js"></script>  -->
+  </body>
+</html>

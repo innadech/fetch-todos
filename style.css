@@ -1,0 +1,93 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+html,
+button,
+input,
+textarea,
+select,
+option,
+a {
+  font-family: Nunito;
+  font-size: 18px;
+  color: #234;
+}
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 6px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: #45a049;
+}
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 3px #243;
+  transform: translateY(2px);
+}
+select,
+textarea,
+input[type='text'] {
+  resize: none;
+  margin: 5px;
+  padding: 10px 15px;
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  vertical-align: top;
+  background-color: #f9f9f9;
+  font-weight: bold;
+}
+textarea::placeholder,
+input[type='text']::placeholder {
+  color: #ccc;
+}
+select:hover,
+textarea:hover,
+input[type='text']:hover {
+  border-color: #45a049;
+}
+select:focus,
+textarea:focus,
+input[type='text']:focus {
+  box-shadow: 0 0 5px hsla(123, 40%, 25%, 0.5);
+}
+p,
+span {
+  user-select: none;
+  margin: 5px;
+  padding: 5px 10px;
+  border: 1px solid #4caf50;
+  border-radius: 8px;
+}
+span {
+  display: inline-block;
+}
+h1,
+h2,
+h3 {
+  color: #4caf50;
+  background-color: #f9f9f9;
+  padding: 10px 15px;
+  transition: all 0.3s;
+}
+h1:hover,
+h2:hover,
+h3:hover {
+  color: #45a049;
+}
+input[type='checkbox'],
+input[type='radio'] {
+  width: 20px;
+  height: 20px;
+}
+input[type='checkbox']:hover {
+  box-shadow: 0 0 5px 0 #2347;
+}
