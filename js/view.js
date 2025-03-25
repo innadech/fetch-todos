@@ -1,3 +1,18 @@
+const view = {
+  renderContainer(todos) {
+    const elContainer = document.querySelector('.container')
+    elContainer.innerHTML = ''
+    for (const todo of todos) {
+      const elGenerate = generateTodo(todo)
+      elContainer.appendChild(elGenerate)
+    }
+  },
+}
+
+function onClickButtonLoad() {
+  controller.handleLoadApp()
+}
+
 function generateTodo(todo) {
   const elDivBlock = document.createElement('div')
   const elH3 = document.createElement('h3')
@@ -18,11 +33,4 @@ function generateTodo(todo) {
   return elDivBlock
 }
 
-function renderContainer(todos) {
-  const elContainer = document.querySelector('.container')
-  elContainer.innerHTML = ''
-  for (const todo of todos) {
-    const elGenerate = generateTodo(todo)
-    elContainer.appendChild(elGenerate)
-  }
-}
+document.querySelector('.load-btn').onclick = onClickButtonLoad
