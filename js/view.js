@@ -13,12 +13,20 @@ function onClickButtonLoad() {
   controller.handleLoadApp()
 }
 
+function onClickButtonRemoveTodo(e) {
+  const id = e.target.parentElement.getAttribute('todo-id')
+  console.log(id)
+  controller.handleRemoveTodo(id)
+}
+
 function generateTodo(todo) {
   const elDivBlock = document.createElement('div')
   const elH3 = document.createElement('h3')
   const elP = document.createElement('p')
   const elButton = document.createElement('button')
+  elButton.onclick = onClickButtonRemoveTodo
 
+  elDivBlock.setAttribute('todo-id', todo.id)
   elDivBlock.classList.add('block')
   elButton.classList.add('btn')
   elButton.classList.add('close-btn')
