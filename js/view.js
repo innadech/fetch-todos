@@ -18,6 +18,12 @@ function onClickButtonRemoveTodo(e) {
   console.log(id)
   controller.handleRemoveTodo(id)
 }
+function onClickP() {
+  let newText = prompt('Введите новый текст')
+  if (newText !== null) {
+    elP.innerHTML = newText
+  }
+}
 
 function generateTodo(todo) {
   const elDivBlock = document.createElement('div')
@@ -25,6 +31,7 @@ function generateTodo(todo) {
   const elP = document.createElement('p')
   const elButton = document.createElement('button')
   elButton.onclick = onClickButtonRemoveTodo
+  elP.onclick = onClickP
 
   elDivBlock.setAttribute('todo-id', todo.id)
   elDivBlock.classList.add('block')

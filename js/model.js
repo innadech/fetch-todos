@@ -10,7 +10,7 @@ const model = {
   // },
 
   removeTodoById(todos, id) {
-    return todos.filter(todo => todo.id !== id)
+    this.todos = todos.filter(todo => todo.id !== id)
   },
   // removeContactById(id) {
   //   function helper(contact) {

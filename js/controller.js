@@ -6,10 +6,10 @@ const controller = {
     view.renderContainer(model.todos)
   },
   handleRemoveTodo(id) {
-    const newTodos = model.removeTodoById(model.todos, id)
-    model.setTodos(newTodos)
-    storage.setTodos(newTodos)
-    console.log(newTodos)
+    model.removeTodoById(model.todos, +id)
+    console.log(model.todos)
+    storage.setTodos(model.todos)
+    // console.log(newTodos)
     view.renderContainer(model.todos)
   },
 }
