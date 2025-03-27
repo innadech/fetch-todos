@@ -7,7 +7,8 @@ const controller = {
   },
 
   handleUpdateTitleById(id, title) {
-    model.updateTodoTitleById(id, title)
+    model.updateTodoTitleById(+id, title)
+    storage.setTodos(model.todos)
     view.renderContainer(model.todos)
   },
 
@@ -15,7 +16,6 @@ const controller = {
     model.removeTodoById(+id)
     console.log(model.todos)
     storage.setTodos(model.todos)
-    // console.log(newTodos)
     view.renderContainer(model.todos)
   },
 }

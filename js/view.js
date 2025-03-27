@@ -20,9 +20,10 @@ function onClickButtonRemoveTodo(e) {
 }
 
 function onClickP(e) {
-  const id = e.target
+  const id = e.target.parentElement.getAttribute('todo-id')
+  console.log(id)
   const title = prompt('Введите новый title')
-  handleUpdateTitleById(id, title)
+  controller.handleUpdateTitleById(id, title)
   // if (title !== null) {
   //   elP.innerHTML = newText
   // }
