@@ -18,11 +18,14 @@ function onClickButtonRemoveTodo(e) {
   console.log(id)
   controller.handleRemoveTodo(id)
 }
-function onClickP() {
-  let newText = prompt('Введите новый текст')
-  if (newText !== null) {
-    elP.innerHTML = newText
-  }
+
+function onClickP(e) {
+  const id = e.target
+  const title = prompt('Введите новый title')
+  handleUpdateTitleById(id, title)
+  // if (title !== null) {
+  //   elP.innerHTML = newText
+  // }
 }
 
 function generateTodo(todo) {
