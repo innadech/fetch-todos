@@ -1,6 +1,9 @@
 const controller = {
   async handleLoadApp() {
     const todos = await api.getTodos()
+    if (todos == false) {
+      todos = storage.getTodos()
+    }
     storage.setTodos(todos)
     model.setTodos(todos)
     view.renderContainer(model.todos)
